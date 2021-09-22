@@ -14,24 +14,13 @@ public class MainDriver {
 	public static void main(String[] args) {
 		UserDao uDao = new UserDaoImpl();
 		AccountDao aDao = new AccountDaoImpl();
-//		//UserDao uDao = new BetterImpl();
-//		
-//		System.out.println(uDao.selectUserByUsername("fake"));
-//		
-//		
-//		User u = uDao.selectUserByUsername("fake");
-//		
-//		u.setTodoList(tDao.selectActivitesByUserId(u.getId()));
-//		
-//		System.out.println(u);
 		
 		Authenticator auth = new AuthenticatorImpl(uDao,aDao);
 		
-//		System.out.println(auth.getUser("fake"));
 		
 		Presentation presentation = new PresentationImpl(auth);
 		
-		presentation.display();
+
 	}
 
 }
